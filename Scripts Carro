@@ -1,0 +1,100 @@
+--[[
+    ╔═══════════════════════════════════════════════╗
+    ║        LAMBORGHINI HUB - ULTRA PREMIUM        ║
+    ║      Script Profissional Completo Roblox       ║
+    ╚═══════════════════════════════════════════════╝
+]]
+
+-- ══════════════════════════════════════════
+-- SERVIÇOS
+-- ══════════════════════════════════════════
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local Lighting = game:GetService("Lighting")
+local StarterGui = game:GetService("StarterGui")
+local HttpService = game:GetService("HttpService")
+local CoreGui = game:GetService("CoreGui")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TeleportService = game:GetService("TeleportService")
+local SoundService = game:GetService("SoundService")
+local Workspace = game:GetService("Workspace")
+
+local Player = Players.LocalPlayer
+local Mouse = Player:GetMouse()
+local Camera = Workspace.CurrentCamera
+
+-- ══════════════════════════════════════════
+-- CONFIGURAÇÕES DO TEMA - LAMBORGHINI
+-- ══════════════════════════════════════════
+local Theme = {
+    -- Amarelo Lamborghini como cor principal
+    Primary = Color3.fromRGB(255, 200, 0),
+    PrimaryDark = Color3.fromRGB(200, 150, 0),
+    PrimaryLight = Color3.fromRGB(255, 220, 60),
+    PrimaryGlow = Color3.fromRGB(255, 210, 30),
+    -- Preto/Cinza carbono como secundário
+    Secondary = Color3.fromRGB(180, 180, 180),
+    Background = Color3.fromRGB(8, 8, 8),
+    BackgroundAlt = Color3.fromRGB(13, 13, 13),
+    BackgroundCard = Color3.fromRGB(20, 20, 20),
+    Surface = Color3.fromRGB(28, 28, 28),
+    SurfaceHover = Color3.fromRGB(38, 38, 38),
+    SurfaceBorder = Color3.fromRGB(50, 45, 10),
+    TextPrimary = Color3.fromRGB(255, 255, 255),
+    TextSecondary = Color3.fromRGB(200, 195, 160),
+    TextMuted = Color3.fromRGB(120, 115, 80),
+    Success = Color3.fromRGB(72, 222, 120),
+    Warning = Color3.fromRGB(255, 200, 0),
+    Error = Color3.fromRGB(255, 75, 75),
+    Accent = Color3.fromRGB(255, 200, 0),
+    Pink = Color3.fromRGB(255, 100, 180),
+    Orange = Color3.fromRGB(255, 150, 50),
+}
+
+local Config = {
+    ToggleKey = Enum.KeyCode.RightControl,
+    HubName = "🏎️ Lamborghini Hub",
+    Version = "🏎️ @gabriel.futury 🏎️",
+    AnimSpeed = 0.4,
+}
+
+-- ══════════════════════════════════════════
+-- ESTADOS
+-- ══════════════════════════════════════════
+local S = {
+    Speed = false, SpeedVal = 10000,
+    JumpPower = false, JumpVal = 10000,
+    InfiniteJump = false,
+    Fly = false, FlySpeed = 100000,
+    Noclip = false,
+    GodMode = false,
+    AntiVoid = false,
+    SpinBot = false, SpinSpeed = 60,
+    TinyCharacter = false,
+    GiantCharacter = false,
+    Invisible = false,
+    LowGravity = false,
+    HighJump = false,
+    AutoJump = false,
+    FreezeSelf = false,
+    KillAura = false, KillAuraRange = 60,
+    AutoAttack = false,
+    HitboxExpand = false, HitboxSize = 10000,
+    AutoParry = false,
+    SpamClick = false,
+    Reach = false, ReachVal = 20,
+    AimBot = false, AimSmooth = 0.5,
+    AutoCombo = false,
+    CriticalHit = false,
+    ESP = false,
+    Fullbright = false,
+    NoFog = false,
+    Chams = false,
+    Tracers = false,
+    PlayerNames = false,
+    ItemESP = false,
+    NoParticles = false,
+    LowGraphics = false,
+    Xray = false,... (82 KB restante(s))
